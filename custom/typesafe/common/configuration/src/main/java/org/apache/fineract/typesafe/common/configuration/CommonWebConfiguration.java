@@ -82,7 +82,7 @@ public class CommonWebConfiguration {
     private final IdempotencyStoreHelper idempotencyStoreHelper;
 
     @Bean
-    public SecurityFilterChain v3FilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.securityMatcher(antMatcher("/v3/**")).authorizeHttpRequests((auth) -> {
             auth.requestMatchers(antMatcher(HttpMethod.OPTIONS, "/v3/**")).permitAll().requestMatchers(antMatcher("/v3/**"))
                     .fullyAuthenticated();
