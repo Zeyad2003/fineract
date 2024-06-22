@@ -60,8 +60,8 @@ jib {
     to {
         image = 'zeyad2003/fineract-typesafe'
         tags = [
-            "${project.version}",
-            'latest'
+                "${project.version}",
+                'latest'
         ]
     }
 
@@ -69,10 +69,10 @@ jib {
         creationTime = 'USE_CURRENT_TIMESTAMP'
         mainClass = 'org.apache.fineract.ServerApplication'
         args = [
-            '-Duser.home=/tmp',
-            '-Dfile.encoding=UTF-8',
-            '-Duser.timezone=UTC',
-            '-Djava.security.egd=file:/dev/./urandom'
+                '-Duser.home=/tmp',
+                '-Dfile.encoding=UTF-8',
+                '-Duser.timezone=UTC',
+                '-Djava.security.egd=file:/dev/./urandom'
         ]
         ports = ['8080/tcp', '8443/tcp']
         labels = [maintainer: 'Aleksandar Vidakovic <aleks@apache.org>']
