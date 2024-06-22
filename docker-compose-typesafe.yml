@@ -25,7 +25,7 @@ services:
 
   fineract:
 #    may change this
-    image: monkeysintown/fineract-apachecon-2024:latest
+    image: zeyad2003/fineract-typesafe:latest
     volumes:
       - ${PWD}/config/docker/logback/logback-override.xml:/app/logback-override.xml
       - ${PWD}/config/docker/aws/etc/credentials:/etc/aws/credentials:ro
