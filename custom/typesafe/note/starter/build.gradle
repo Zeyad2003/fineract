@@ -16,10 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-description = 'The new Type-Safe API layer (v3): Note Core'
+description = 'The new Type-Safe API layer (v3): Note Starter'
 
 group = 'org.apache.fineract.typesafe.infrastructure.note'
 
-archivesBaseName = 'fineract-custom-note-core'
+archivesBaseName = 'fineract-custom-note-starter'
 
 apply from: 'dependencies.gradle'

@@ -42,16 +42,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/v3/{resourceType}/{resourceId}/notes", consumes = { APPLICATION_JSON_VALUE }, produces = { APPLICATION_JSON_VALUE,
-        APPLICATION_PROBLEM_JSON_VALUE })
+@RequestMapping(value = "/v3/{resourceType}/{resourceId}/notes", produces = { APPLICATION_JSON_VALUE, APPLICATION_PROBLEM_JSON_VALUE })
 @Tag(name = "Notes", description = "Notes API allows to enter notes for supported resources.")
 @RequiredArgsConstructor
-public class NoteApiController {
+public class NotesApiController {
 
     private final NoteReadPlatformService noteReadService;
 
     @GetMapping
-    @Operation(summary = "Retrieve a Resource's description blabla", description = """
+    @Operation(summary = "Retrieve a Resource's description", description = """
             Retrieves a Resource's Notes
 
             Note: Notes are returned in descending createOn order.
